@@ -30,6 +30,9 @@ a {
     width: 80%;
     margin: auto;
     padding: 0 15px;
+    @media (max-width: 768px) {
+        width: auto;
+    }
 }
 
 /* Start Navbar */
@@ -47,10 +50,17 @@ a {
             object-fit: cover;
         }
         .links {
-            @include flex(center, center);
+            @include flex(space-around, center);
+            @media (max-width: 768px) {
+                width: 100%;
+            }
             a {
                 padding: 10px 20px;
                 position: relative;
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                    padding: 10px 5px;
+                }
                 &::before {
                     content: "";
                     width: 0;
@@ -102,7 +112,6 @@ a {
                 @media (max-width: 576px) {
                     text-align: center;
                     width: 300px;
-                    font-size: 14px;
                 }
             }
             button {

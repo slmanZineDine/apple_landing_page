@@ -24,6 +24,11 @@ a {
   margin: auto;
   padding: 0 15px;
 }
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
 
 /* Start Navbar */
 .navbar {
@@ -47,12 +52,23 @@ a {
 }
 .navbar .container .links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .navbar .container .links {
+    width: 100%;
+  }
 }
 .navbar .container .links a {
   padding: 10px 20px;
   position: relative;
+}
+@media (max-width: 768px) {
+  .navbar .container .links a {
+    font-size: 15px;
+    padding: 10px 5px;
+  }
 }
 .navbar .container .links a::before {
   content: "";
@@ -110,7 +126,6 @@ a {
   .landing-page .container .text p {
     text-align: center;
     width: 300px;
-    font-size: 14px;
   }
 }
 .landing-page .container .text button {
